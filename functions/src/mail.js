@@ -19,8 +19,9 @@ exports.sendMail = functions
             html: html,
           },
         })
-        .then(() =>
-          console.log("Queued email for delivery!", to, subject, text, html)
-        );
+        .then(() => {
+          console.log("Queued email for delivery!", to, subject, text, html);
+          res.json({ message: "Queued email for delivery!" });
+        });
     });
   });
