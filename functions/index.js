@@ -15,6 +15,8 @@ var firebaseConfig = {
 admin.initializeApp(firebaseConfig);
 
 const mail = require("./src/mail");
+const mailMice = require("./src/bizconnectmice");
 
 // Mail
 exports.sendMail = mail.sendMail;
+exports.sendMailFromBizConnectMice = mailMice.sendMailFromBizConnectMice;
