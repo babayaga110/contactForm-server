@@ -2,7 +2,7 @@ const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const cors = require("cors")({ origin: true }); // only requied for api request
 
-exports.sendMail = functions
+exports.sendMailFromCompany = functions
   .region("asia-south1")
   .https.onRequest((req, res) => {
     cors(req, res, async () => {
